@@ -1,0 +1,489 @@
+PaperLive - DevOps with Multi-Cloud:
+
+Start Date: 29th Sep. 2026
+
+
+Day 1 - Orientation Sesion 1
+
+Day 2 - Orientation Lab. Session 2
+
+######################
+Day 2 | 30th Sep. 2026
+######################
+
+	Lab Requirements :::
+	
+	- Lab Environments :
+	
+	
+		DevOps Modules : 	Open-Source Tools/Services
+		
+		1 AWS Cloud Platform :::
+			
+			- To Create AWS Free-Tier Account ::
+			
+				- Active E_Mail_Id, Mobile_Number, Credit/Debit Card(Enabled with International Transactions)
+				
+				- 200 USD - 6 months
+				
+				- https://aws.amazon.com/console/
+				
+				- https://aws.amazon.com/resources/create-account/
+				
+				
+			- For DevOps Modules ::
+			
+				-> Create AWS EC2 Instances(Linux VMs) to Manage Open-Source DevOps Tools & Services.
+				
+				
+		2. GITHub Account :::
+		
+			- https://github.com/
+			
+			- Used to Maintain the Application Source Code and Project Documents 
+			
+			- Create GitHub Repositories to Manage the DevOps Components & Training Docs
+			
+			
+		
+		3. Install git client on Local Machine
+		
+			- https://git-scm.com/install/
+			
+		4. DockerHub Account
+		
+			- https://hub.docker.com/  # Create using existing Github 
+			
+			
+		5. Install Visual Studio Code on Local Machine 	- Develop the Source Code.
+			
+			- https://code.visualstudio.com/download
+
+		6. Install MobaXTerm/Putty on Local Machine - Windows Users
+		
+			- SSH Agent to connect to Remote Servers.
+			
+			- https://mobaxterm.mobatek.net/download-home-edition.html  
+				# Choose Installer Edition.
+				# Right clmobick & Extract 
+				# Goto to the Folder & Run the Exec.	
+
+		7. Install Terraform on Local Machine
+															
+			# https://developer.hashicorp.com/terraform/install
+
+######################
+Day 3 | 5th Oct. 2026
+######################
+
+	- Setup Lab Infra-Structure ::::
+	
+			- For DevOps Modules ::
+			
+				-> Create AWS EC2 Instances(Linux VMs) to Manage Open-Source DevOps Tools & Services.		
+	
+	- Create AWS Free-Tier Account:
+	
+			- https://aws.amazon.com/console/
+			
+			- https://aws.amazon.com/resources/create-account/	
+			
+			
+	- Active AWS Console Access :
+	
+			- Login to AWS Console using root ID(Email_ID) and Password 
+			
+			- Types of AWS Users:
+			
+				- root User 	===> Administrator 		==> Manage the Account/Bills and other AWS IAM Users.
+				
+				- IAM User 		===> AWS IAM User_ID 	==> Create and Manage the AWS Resources.
+				
+				
+					- Authentication 	==>	Who can access?  
+					
+					- Authorization  	==> What action can be performed? ==> RBAC - Role Based Access Control					
+					
+					IAM --> Identity and Access Management Service
+					
+					
+	- Login to AWS Console using root user ID & Password :
+	
+	- Billing and Cost Management :
+	
+	- AWS Region :
+	
+	- Choose AWS Service :
+
+			
+		- IAM Service 			---> Create and Manage the IAM Service Components 
+			- IAM Service Components:
+			
+				- IAM User 
+				- IAM User Group
+				- IAM Policy
+				- IAM Role
+		
+			- Create IAM User based current project requirement.
+			
+			
+				-->  Create IAM User ID :::
+				
+						IAM User_ID and password  
+						
+						
+				- Various Authentication Modes :::
+				
+				
+					- Password 
+					- MFA 
+					- passkey 
+					- Token 
+					- CA Certs
+					- SSH Keys
+					
+					
+					
+					
+					--> Password based Authentication
+					
+					--> Token Based Authentication
+					
+					--> SSH Key based Authentication
+					
+						-> Public Key
+						-> Private Key 
+						-> Authorised Key
+				
+					--> Passwordless Authentication
+				
+		- AWS Compute Service 	---> EC2 Service ==> Create & Manage the Compute Environments
+										
+											Non-Prod Environments				Production Environments
+											
+												- Dev 
+												- Build 
+												- QA 
+												- UAT 								- Prod Servers1,2,3,4,5
+												
+			- Create EC2 Instances	
+
+		- S3 Service 			---> Create and Manage the storage
+			
+					
+				
+Next:
+	- IAM User, Group :::
+
+
+######################
+Day 4 | 5th Oct. 2026
+######################
+
+		- IAM Service 			---> Create and Manage the IAM Service Components 
+			- IAM Service Components:
+			
+				- IAM User 
+				- IAM User Group
+				- IAM Policy
+				- IAM Roles
+				
+				
+				RBAC : -> Member/Admin/Lead
+				
+	- IAM User :	devopsadmin
+	
+	- Access Level :
+		
+		- IAM Policy 	==> Set the permissions based on the user/group role
+		
+		- IAM Group 	==> Set of IAM Users - Created based on the Teams/Profiles
+		
+		
+		
+		DevOps Team :
+		
+		
+		
+			- Create IAM User ===> Attach ===> AdministratorAccess Policy
+			
+			DevOps_Users_Grp:		
+				- devopsuser1,2,3,4			pl-devopsuser1
+			
+			Devops_Admin_Grp:
+				- devopsadmin1,2
+				
+			
+			
+																
+			
+			
+				- IAM User&Group		---> 	Attach IAM Policy  to access Database
+				
+				- EC2 Instance (VM)		---> 	Create IAM Role with IAM Policy to access Database  	---> Attach IAM Role to EC2 Instance 
+										---> 	Create IAM Role with IAM Policy to access S3 Bucket  	---> Attach IAM Role to EC2 Instance 
+				
+				
+			CI CD :
+			
+				Artifact --> AWS S3 Buckets 
+				
+				
+				
+				- IAM Roles :::		pl-ec2-s3-iam-role1 	
+				
+				
+		6. Install MobaXTerm/Putty on Local Machine - Windows Users
+		
+			- SSH Agent to connect to Remote Servers.
+			
+			- https://mobaxterm.mobatek.net/download-home-edition.html  
+				# Choose Installer Edition.
+				# Right click & Extract 
+				# Goto to the Folder & Run the Exec.
+
+
+
+
+
+##############
+7th Oct. 2026
+##############
+
+	EC2 Instance ::::
+	
+	
+		Remote Server Access :::
+		
+		-> Remote Server Access :::: 
+		
+		
+		-> Environments :::
+		
+			
+		DevOps Perspective :::
+		
+		
+			- Automate the Application Builds and Deployment 
+			
+			
+		-> Environments :::
+
+			Non-Prod Environments				==============>						Prod Environment
+		
+		
+				- Dev Environment (VM)
+				
+				- Build Environment (VM)
+				
+					- Build is process of compiling the source code and creating the artifacts(*.exec) 
+				
+				- Test 
+				
+					- QA (VM)
+					
+					- UAT 	(VM)					--------------->					Production Servers1,2,3,4,5 
+		
+		
+	Application Development Team :::
+		
+		--> Java Web Application 
+		
+				==> High Level Lang(source)
+				
+						- Compile 
+						- Create the Artifacts(Binaries)
+						
+						- Unit Level Testing  --> 100% 
+				
+				
+			
+			
+	
+	EC2 Service:
+	
+		-> Create the Virtual Machines(EC2 Instances)
+		
+			-> Remote Cloud Platform :::
+			
+				-> Establish a Secure Connection to the remote server
+				
+				
+						Authentication Mode:
+						
+							- Password based Authentication ==> Use during Sign-in with web browser
+							
+							- Token Based Authentication    ==> Can be used to access thru API/CLi/SDK
+							
+							- Key Based Authentication		==> Public_Key & Private_Key
+							
+							- Passwordless Authentication	==> Recommended only within the closed network
+							
+							
+		- Client_Server Architecture:::
+		
+			Server 							Jenkins,Kubernetes,Ansible,Terraform,
+				- Client1,2,3,4,5
+				
+		- Create EC2 Instance(VM)
+
+			- VM 
+			--> Region 
+			--> Name(Tag) of the Instance
+			--> AMI - Amazon Machine Image - Template to create the Virtual Machines	--> Linux(Ubuntu)
+			--> Instance Type - Define the CPU & RAM Requirements						--> t2.micro / t3.micro -> 1GM RAM & 1 CPU
+			--> Security Group 
+			--> Attach IAM Role 
+			
+			
+			
+		-> Public IP Address 		==> Used to access the EC2 Instance from External Network 
+		-> Private IP Address		==> Used to access the EC2 Instance within the internal Network
+		
+	
+		
+				3 - tier Application :
+					
+					--> Front-End Layer		(VM) 
+					
+					--> Application Layer 	(VM)
+					
+					--> Database Layer 		(VM)
+					
+					
+					
+					
+					--> 1 VM 		==> 750 Hrs/Month 
+					
+					--> 10 VMs 		==> 75 Hrs/Month 
+					
+		
+Next :::	
+
+	- Connect to Remote Server using SSH.
+
+
+
+##############
+8th Oct. 2026
+##############
+
+	- Connect to Remote Server using SSH. ==> Port: 22
+	
+	
+		--> EC2 Instance Connect Option 		===> Using Web Browser 
+		
+		--> SSH Agent like MobaXTerm/Putty 
+
+			Install MobaXTerm/Putty on Local Machine - Windows Users
+		
+				- SSH Agent to connect to Remote Servers.
+				
+					- Remote Host Name 				:	Public IP Address  eg.: 65.2.127.126
+					
+					- User Name 					: 	ubuntu
+					
+					- Password ==> Private Key 		: 	*.pem				
+				
+				- https://mobaxterm.mobatek.net/download-home-edition.html  
+					# Choose Installer Edition.
+					# Right click & Extract 
+					# Goto to the Folder & Run the Exec.
+
+				
+		--> Using the Terminal/Command Prompt 	===> Linux/Mac Users 
+		
+					--> Mac Terminal ::::
+					
+				How to connect ::
+
+					1. Open a Mac Terminal
+
+					2. Locate or download your private key file
+
+					3. Ensure your key is not publicly viewable
+
+					chmod 400 "AWS_MLOps_KeyPair.pem"
+
+					4. Connect to your instance using its Public DNS
+
+					ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-65-2-127-126.ap-south-1.compute.amazonaws.com
+							
+							
+--> Security Group ::::					
+
+		--> Used to allow access to the EC2 Instances :::
+		
+			- Inbound Rule 		===> Allow the Incoming Traffic to the EC2 Instance
+			
+			- Outbound Rule		===> Allow the Outgoing Traffic from the EC2 Instance
+			
+		--> For any Linux Instance by default port 22 is enabled in the Inbound Rule to allow SSH Connection 
+		
+			Set the Inbound Rules.
+			
+
+##############
+9th Oct. 2026
+##############
+
+	-> AWS Solutions Architect!
+	
+		- Infra-Structure Management Team
+		- Development Team 
+	
+	
+	-> VM ==> Desktop / Web / Mobile / AI & ML Model
+	
+	
+	-> DevOps Team : DevOps Architect
+	
+		-> Jenkins Servers / Kubernetes Cluster ==> VM 
+		
+		DevOps Team 
+		
+		
+		- DevOps Assessment 
+		
+		
+	-> Create IAM User,Group,Role 
+	
+	-> Create EC2 Instance
+	
+	-> Login to EC2 Instance
+	
+	
+	-> Roles :
+	
+		-> AWS Jr. Cloud Associates ==> 0 - 1 yr.
+		-> AWS Sr. Cloud Associates ==> 1 - 2.5 yr.
+		-> AWS Cloud Engineer ==> 3 - 5 yr.
+		
+		-> Solutions Architects Associates
+		-> Solutions Architects Professional 
+		-> AWS Cloud Consultants 
+	
+	
+	
+	-> GitHub Repositories ::::
+	
+		--> GitHub Account:
+		
+		
+		
+			--> Fork the Repository ==> Create a Copy of Remote GITHub Repository to another Remote GITHub Repository
+			
+					
+	--> AWS Console 
+	
+	--> AWS Cli
+	
+	--> AWS SDK - ==> Python 
+	
+	--> IAC Tools ==> Cloudformation/Terraform
+	
+	--> Scripting Languages : shell scripting/yaml scripting/python scripting/groovy scripting ==> Create Process Automation
+	
+	--> Programming Languages : Java/.Net/Python ==> Develop Business Applications
+	
+					
