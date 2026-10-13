@@ -1,0 +1,452 @@
+#########################
+Day - 1 | 12th Oct. 2026
+#########################
+
+	- Introduction to DevOps :::
+	
+	
+	- What is DevOps???
+	
+		- Development & Operations :::
+		
+	- Software Applications :::
+	
+		How the Software Applications are Developed and Implemented ???		
+		
+		- Mobile Applications
+		
+		- Web Applications
+		
+		- Desktop Applications
+		
+		- Embedded Applications
+		
+		- AI & ML Applications
+		
+		
+	Application Development Team :
+	
+		- Desktop Application :
+		
+			--> Library Management :
+			
+			--> SuperMarket Billing System :
+		
+	- Software Development LifeCycle - SDLC - Process 
+	
+		- Requirement Analysis 
+		
+		- Design and Documentation 
+		
+		- Code 
+		
+		- Testing 
+		
+		- Implementation/Deployment to Production
+		
+		- Monitor/Maintain the Applications
+		
+		
+	- Waterfall Model : 
+	
+			-> Based on Top-Down / Linear Approach
+			-> It was used to develop Monolith Application Architecture
+			
+		
+			Eg.: SuperMarket Billing System :
+			
+						Functions/Modules :	
+						
+								- Inventory Management 
+								- Application UI Design 
+								- Billing System 
+								- Payment 
+									- CASH 
+									- CARD 
+								- Delivery Management 
+								
+									+++ Online Payment/UPI
+								
+
+		Core Project ::
+				
+				- Requirement Analysis  	1------7--------15 Months 
+				
+				- Design and Documentation 
+				
+				- Code 
+				
+				- Testing 
+				
+				- Implementation/Deployment to Production
+				
+				- Monitor/Maintain the Applications
+				
+					
+		Enhancement Project ::		+++ Online Payment/UPI
+				
+				- Requirement Analysis  	1-----3 Months 
+				
+				- Design and Documentation 
+				
+				- Code 
+				
+				- Testing 
+				
+				- Implementation/Deployment to Production
+				
+				- Monitor/Maintain the Applications
+			
+			
+			
+	- AGILE Methodologies :::: Task based approach
+
+			Eg.: SuperMarket Billing System :	
+			
+						Iterations  :	
+						
+								- Inventory Management 
+								- Application UI Design 
+								- Billing System 
+								- Payment 
+									- CASH 
+									- CARD 
+								- Delivery Management 	
+
+	Iteration 1 : Inventory Management 
+
+			- Requirement Analysis 
+			
+			- Design and Documentation 
+			
+			- Code 
+			
+			- Testing 
+			
+			- Implementation/Deployment to Production with proper approvals
+			
+
+	Iteration 2 : Application UI Design
+
+			- Requirement Analysis 
+			
+			- Design and Documentation 
+			
+			- Code 
+			
+			- Testing 
+			
+			- Implementation/Deployment to Production with proper approvals
+			
+			
+	Iteration 3 : Billing System 
+
+			- Requirement Analysis 
+			
+			- Design and Documentation 
+			
+			- Code 
+			
+			- Testing 
+			
+			- Implementation/Deployment to Production with proper approvals
+			
+			
+	Iteration - n : +++ Online Payment/UPI
+
+			- Requirement Analysis 
+			
+			- Design and Documentation 
+			
+			- Code 
+			
+			- Testing 
+			
+			- Implementation/Deployment to Production with proper approvals
+			
+			
+		
+	Using AGILE Methodologies :::
+		
+		- We can achieve :
+		
+			- Continuous Development
+			
+			- Continuous Integration 
+			
+			- Continuous Testing 
+			
+			- Continuous Delivery ::
+				-> Used to release the changes to Production Environment with manual approvals
+				-> Always expects manual reviews & approvals for Production Releases 
+			
+			
+		- We cannot achieve :
+		
+			- Continuous Deployment ::
+				-> Used to release the changes to Production Environment without any manual approvals
+				-> Never expects any manual approvals for Production Releases
+				
+				
+				
+	- DevOps ::::
+	
+		DevOps is a Software Development Strategy/process, used to build collaboration between the teams like Development Team and Operations Team to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in more automated fashion.
+		
+		
+		
+	- How to Implement DevOps ?
+	
+		--> Identify the Teams involved :::
+		
+			- DevOps Team : (DevOps Architects/DevOps Consultants)
+			
+				- Infra-Structure Management Team --> 	# Create and Manage Infra-Structure
+				- Application Development Team 		
+				- Testing Team 	==> 					# 100 Test Servers 
+				- Release Management Team 
+				- Production Support Team 
+				- Production Monitoring Team 
+				- IT Security Team 
+
+
+		--> Define Environments :::
+
+				
+			- Non-Prod Environments 						=========================>					Production Environment
+			
+			
+				- Dev Environment
+				
+				- Build Environment --> (*.jar) --> Unit Test 
+				
+				- Test Environments 
+				
+					- QA 
+					
+					- UAT 									------------------------->						Production Servers (LIVE)
+					
+					
+		--> Application Architecture :::
+
+			- Monolith Application Architecture	
+				- Tightly Coupled Application Architecture
+				- All the Functions/Modules are tightly coupled
+				- With this we can achieve Continuous Delivery. But, we cannot achieve Continuous Deployment.
+		
+
+			- Micro-Service Based Application Architecture
+				- Loosely coupled Application Architecture
+				- Here, each and every function / Module are called a Micro-Service
+				- Each Micro-Service can be idependently developed, tested and implemented to production.
+				- With this we can achieve Continuous Deployment	
+
+Next ::::
+				
+		--> Stages of DevOps :
+		
+		
+		--> DevOps Lifecycle :
+
+#########################
+Day - 2 | 13th Oct. 2026
+#########################
+
+	- Stages of DevOps :::
+	
+	
+			- Continuous Development :::
+			
+				- It is the capability of any Application Development Team to Continuously Develop code changes. 
+				- It is a process that is used to improve the Developers' productivity.
+			
+				Role of any Developers ?
+				
+					- Understand the Requirement and Create the Source Code - Java/.Net/Python
+			
+				Manual Activities :::
+				
+					- Build the Source Code
+						- Build is process of compiling the source code and create artifacts(Binaries: *.war.*.jar,*.exec,*.dll)
+					- Perform Unit Testing 
+					- Promote the Changes for further Testing Environments
+					- Notify the Testing Team through emails
+
+				Using DevOps Approach :
+				
+					Automate: 
+
+						- Build the Source Code
+							- Build is process of compiling the source code and create artifacts(Binaries: *.war.*.jar,*.exec,*.dll)
+						- Perform Unit Testing 
+						- Promote the Changes for further Testing Environments
+						- Notify the Testing Team through emails
+			
+					- Create the Source Code - Java/.Net/Python
+					- Save the Source Code in the Source Code Repositories(GitHub)			
+			
+				Tools :
+				
+					- IDE(Integrated Development Environment) --> Eclipse, Visual Studio, Visual Studion Code, Pycharm, IntelliJ
+					- Build Tool & Unit Testing Tools ( Maven, TestNG,...)
+					- Git, GitHub
+			
+		
+		- Continuous Integration :::
+		
+				- It is the capability of any Application Development Team to Continuously Integrate the source code changes for further testing.		
+		
+				Automate: 
+
+					- Build the Source Code
+						- Build is process of compiling the source code and create artifacts(Binaries: *.war.*.jar,*.exec,*.dll)
+					- Perform Unit Testing 
+					- Promote the Changes for further Testing Environments
+					- Notify the Testing Team through emails	
+			
+				Tools :
+					- IDE(Integrated Development Environment) --> Eclipse, Visual Studio, Visual Studion Code, Pycharm, IntelliJ
+					- Build Tool & Unit Testing Tools ( Maven, TestNG,...)
+					- Git, GitHub
+					- Docker, Ansible, Kubernetes
+					- Jenkins
+					
+		
+		- Continuous Testing :::
+		
+				- It is the capability of the Testing Team to Continuously Test the Changes 
+				- Test Cases/Test Scenarios - Test Reports 
+				
+				Tools :
+				
+					- TestNG, Selenium
+					- Jenkins 
+					
+					
+		- Continuous Delivery/Deployment :::
+
+			- Continuous Delivery ::
+			
+				-> Used to release the changes to Production Environment with manual approvals
+				-> This process expect manual intervension/approval for production releases 
+				-> During the process of application upgrade or downgrade, there might be application downtime
+				-> This is used for Monolith Application Architecture
+				
+			Eg.: 
+				--> Online Banking/Insurance/Logistic :::
+				
+					-->  Release Management Team :::
+							Release Window 	==> 4 - 6 Hrs ==> Non-Business Hours
+							
+							StakeHolder ==> Release the Changes to Prod  V1 --> V2 
+							
+										==> Fix / Revert the changes 
+
+									
+			- Continuous Deployment ::
+			
+				- It is the process to release the changes to production environment, without any manual intervension/Approvals..
+				- Never expects any manual approvals for Production Releases	
+				- During the process of application upgrade or downgrade, there is no downtime
+				- Zero Downtime can be achieved only with the Micro-Service based Application Architecture.
+				- Is the matured level of DevOps.		
+				- Shift Left Approach :::
+				
+					Dev----QA----UAT-----> prod 
+				
+			Eg.: 
+				--> Facebook/Netflix/amazon.com/Gmail
+				
+				
+			www.amazon.com ::: - 3-tier 
+			
+			Sign_Up --> Micro-Service1 --> Developer1 --> Unit Testing --> CI --> QA/UAT --> Release to Prod 
+			
+			Sign_In --> Micro-Service2
+			
+			Search --> Micro-Service3
+			
+			Add to Cart 
+			
+			Payment 
+			
+			Place Order 
+			
+			Confirm Order 
+			
+			Track 
+			
+			
+			- Tools :
+			
+				- Jenkins / gitlab-ci / github-actions /azure pipeline
+				- Ansible,Docker,Kubernetes
+				
+				
+			- CI/Cd(delivery) Pipeline 
+		
+			- CI/CD(Deployment) Pipeline
+		
+		
+		- Continuous Monitoring :::
+		
+			- To ensure business continuity.
+			- To ensure that the application and the Infra-Structure are up and running!
+		
+			- Production Support & Monitoring Team 
+			
+			
+			Infra-Structure Monitoring :::
+			
+				- Production Servers / Database / Network / Storage 
+					
+				Tools: 
+				
+					- Prometheus / Grafana / Dynatrace / Nagios / Splunk
+					- Alert Management
+						75% as a threshold limit
+			
+			Application Monitoring :::
+			
+				- Micro-Services --> Database calls
+					
+				Tools :
+				
+					- AppDynamics / DataDog
+			
+
+				- Jenkins 
+					
+			
+		Infra-Structure Management:
+		
+			- IAC - Infra-Structure As Code - Tools
+		
+			Infra-Structure Provisioning/Creating 	::: Terraform/CloudFormation/ARM
+			
+			Infra-Structure Configurations 			::: Ansible/Chef/Puppet
+			
+			
+			SDK : 
+				-> Python 
+				
+		DevOps Tools :
+		
+			Open-Source DevOps Tools :::
+			
+				git,github,jenkins,docker,kubernetes,ansible,terraform,promethes,grafana 
+			
+			
+			
+			Managed Services :::
+			
+				AWS 	--> Codebuild,CodeDeploy,CodePipeline
+				
+				Azure 	--> Azure DevOps Services 
+				
+				GCP 	--> G DevOps Services 
+		
+			
+Next :::
+
+	DevOps LifeCycle Pipeline 
