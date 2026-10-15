@@ -450,3 +450,74 @@ Day - 2 | 13th Oct. 2026
 Next :::
 
 	DevOps LifeCycle Pipeline 
+
+#########################
+Day - 3 | 15th Oct. 2026
+#########################		
+		
+	
+	- DevOps LifeCycle Pipeline :::
+
+	- DevOps Workflow LifeCycle ::: CI/CD :
+	
+	
+		Developers Create Source Code 
+		
+		Save it to Source Code Repository(GitHub)
+		
+		SCM_Checkout	-> Process to download the code to Build Environment
+		
+		Build 
+		
+		Create Artifacts 
+		
+		Perform Unit Testing 
+		
+		Promote to Test Environment
+		
+		Automate Testing 
+		
+		Promote to Production Environment
+		
+		Prod Testing / LIVE 
+		
+		Monitoring - Feedback 
+
+
+	- Overall DevOps Process :::
+	
+		--> Detailed DevOps Assessment ::::
+		
+			--> To identify the scope for automation!
+		
+		--> DevOps Team will produce the Assessment Reports:
+		
+		--> Recommend the DevOps solutions
+		
+		--> Upon Client's approval will Implement DevOps 
+		
+		
+
+	- DevOps Roles and Responsiblities :::
+	
+		DevOps Team: 
+		
+			DevOps Architects/DevOps Consultants ==> Customer facing!
+			DevOps Lead 
+			DevOps Associates
+	
+
+		DevOps is a Software Development Strategy/process, used to build collaboration between the teams like Development Team and Operations Team to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in more automated fashion.	
+
+	- DevOps is all about :
+	
+		- People
+		
+		- Process 
+		
+		- Tools 
+
+
+	- Waterfall_Model,AGILE,DevOps,DevSecOps,MLOps,GitOps,AIOps,ITOps,SRE
+	
+	
