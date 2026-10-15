@@ -1,0 +1,178 @@
+##############
+Module - 2:::
+##############
+#########################
+Day - 3 | 15th Oct. 2026
+#########################		
+
+	- Fundamentals of Linux :::
+	
+	
+	Based on DevOps Perspective!
+
+		Overview of Linux
+		Linux Architecture
+		Linux Distributions
+		Basic Linux Commands
+		File Permission Management
+		User Creation
+		Shell Scripts
+		SSH and VI Utility		
+	
+
+	- As a DevOps Team we can Manage the Linux Machines
+	
+		- Package Management 
+		- File Management 
+		- User Management 
+		- Access Management 
+		- Remote Servers Management 
+		- Process Automation(Shell Scripting)	
+		
+		
+Pre-requisites:
+
+	1. Enable AWS Cloud Platform :
+	
+	2. Create AWS EC2 Instances based on Linux Ubuntu Distribution.
+	
+	3. Connect to EC2 Instance :
+	
+	4. Login to EC2 instance 
+	
+	
+	- Access AWS Services using AWS Console :::
+	
+	1. Create an AWS Account ::
+	
+			1. Create a free tier account on AWS Cloud  		# EC2 Service to create Virtual Machines 
+				
+				- https://aws.amazon.com/resources/create-account/
+				
+					- Active Email_ID 
+					- Active Mobile Number 
+					- Active Credit/Debit Card Number enable with International Transaction
+					
+					- PAN Card Number
+					
+				- Login to AWS Management Console using root_user_id(Email_ID) & password
+					- Create MFA - Two-way Authentication 
+					
+						- Install google authenticator App on your mobile phone
+						
+				- Create AWS EC2 Instances - Virtual Machines (Lab Environments)
+				
+	2. Login to AWS Console as a root user.(EMail_ID & Password)
+	
+	3. Explore the AWS Dashboard & Services 
+		
+	4. EC2 Service		==> Used to Create Computing Environment
+	
+	5. Create EC2 Instances :::::
+	
+		-> Linux Ubuntu Machines: 24.04 LTS 
+		
+
+	Linux :
+
+		Overview of Linux :::
+		
+		Operating System acts as an interface between the user applications & the underlying Hardware.
+		
+
+	Fundamentals of Linux Operating System 
+	
+		- Windows 
+		- Mac 
+		- Linux 
+		
+		
+	Linux Operating System 
+		- Open-Source 
+		- Is Secured 
+		- Linux OS was created based on the Unix Operating System 
+		- Is an interface between the user applications and underlying Hardware.
+		- Linux OS is based on the Command User Interface
+		- Core of Linux OS is called kernel!
+			Components of Linux OS Architecture
+				- Networking 
+				- Storage 
+				- IPC - Inter Process Communication
+				- User Management 
+				- Security Management 
+				- Control Groups 
+				- Namespace 
+				- Process 
+					
+
+
+		- Basic Linux Commands 
+		
+			Package Manager - apt/yum/dnf ==> can be executed as a root user.
+			
+		- Linux Distributions 
+				
+			Packages can be managed based on the Distributions 
+			
+				- Centos / RHEL 		===> 	yum package Manager 
+				- Debian / Ubuntu 		===>	apt/apt-get package Manager 
+				- Fedora				===>	dnf (Latest Version of Fedora)
+												yum (Previous Version of Fedora)
+								
+				- Access AWS Account :
+			
+				- Create EC2 Instance :
+					- Ubuntu 24.04 
+						- Security Group 
+						
+						
+						1 VM ==> 750 Hrs/Month 
+						
+						10 VMs ==> 75 Hrs/Month
+						
+						
+				- Connect to EC2 Instance ::::
+				
+					To connect to Linux instance we use 
+					
+						- SecureSHell(SSH) Connection
+						
+						- port 22 
+						
+					- Parameters required to enable SSH connection
+
+						- HostName 				# Public IP Address 
+						
+						- UserName				# Default Linux User Name 
+
+						- User Credentials: (Authentication Types)
+							- Password based Authentication
+							- Token based Authentication
+							- Key based Authentication
+								- Private Key 					# *.pem
+								- Public Key 
+								- authorized_keys
+							- Passwordless Authentication
+							
+				- Login to EC2 Instance :::
+				
+					- EC2 Instance Connect 				# Thru Web Browser
+					
+					- SSH Agent :						# Windows Users 
+					
+						- Putty 
+						- MobaXTerm						# Windows Users 
+							==> https://mobaxterm.mobatek.net/download-home-edition.html	
+							
+					- Terminal :						# Window/Mac/Linux
+
+							Open the Terminal.
+
+							Locate your private key file. The key used to launch this instance is AWS_MLOps_KeyPair.pem
+
+							Run this command, if necessary, to ensure your key is not publicly viewable.
+							chmod 400 "AWS_MLOps_KeyPair.pem"
+
+							Example:
+
+							ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-13-126-190-242.ap-south-1.compute.amazonaws.com
