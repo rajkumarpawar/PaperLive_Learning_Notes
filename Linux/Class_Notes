@@ -173,6 +173,153 @@ Pre-requisites:
 							Run this command, if necessary, to ensure your key is not publicly viewable.
 							chmod 400 "AWS_MLOps_KeyPair.pem"
 
+#########################
+Day - 4 | 16th Oct. 2026
+#########################
+
+
+	- Access AWS Console :::
+	
+		- Choose the nearest Region - Mumbai 
+		
+		- Virtual Machines ---> Linux VM ===> AWS --> EC2 Instances 
+		
+		
+	- Create EC2 Instance ::::
+	
+	
+		- Name/Tag 
+		
+		- AMI 
+		
+		- Instance Type 
+		
+		- KeyPair 
+		
+			- Key based authentication:
+			
+					- Private Key 	==> *.pem
+					
+					- Public Key 	==> authorized_keys
+		
+		- No. of Instances 
+
+				- Connect to EC2 Instance ::::
+				
+					To connect to Linux instance we use 
+					
+						- SecureSHell(SSH) Connection
+						
+						- port 22 
+						
+					- Parameters required to enable SSH connection
+
+						- HostName 				# Public IP Address 
+						
+						- UserName				# Default Linux User Name  (ubuntu)
+
+						- User Credentials: (Authentication Types)
+							- Password based Authentication
+							- Token based Authentication
+							- Key based Authentication
+								- Private Key 					# *.pem
+								- Public Key 
+								- authorized_keys
+							- Passwordless Authentication
+							
+				- Login to EC2 Instance :::
+				
+					- EC2 Instance Connect 				# Thru Web Browser
+					
+					- SSH Agent :						# Windows Users 
+					
+						- Putty 
+						- MobaXTerm						# Windows Users 
+							==> https://mobaxterm.mobatek.net/download-home-edition.html	
+
+							Install MobaXTerm/Putty on Local Machine - Windows Users
+							
+								- SSH Agent to connect to Remote Servers.
+								
+								- https://mobaxterm.mobatek.net/download-home-edition.html  
+									# Choose Installer Edition.
+									# Right click & Extract 
+									# Goto to the Folder & Run the Exec.	
+				
+					- Terminal :						# Window/Mac/Linux
+
+							Open the Terminal.
+
+							Locate your private key file. The key used to launch this instance is AWS_MLOps_KeyPair.pem
+
+							Run this command, if necessary, to ensure your key is not publicly viewable.
+							chmod 400 "AWS_MLOps_KeyPair.pem"
+
+							Example:
+
+							ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-13-126-190-242.ap-south-1.compute.amazonaws.com
+					
+						
+	
+	
+	1 VM ==> 750 Hrs/Month 
+	
+	10 VMs ==> 75 Hrs/Month 
+	
+
+	Working with Linux Commands ::::
+	
+
+		- Package Management ::::
+		
+			Package Manager - apt/yum/dnf ==> can be executed as a root user.
+			
+		- Linux Distributions 
+				
+		- Package Management :::
+
+			- Package Managers are used to install/Uninstall/Upgrade the Packages/software 
+		
+				- Centos / RHEL 		===> 	yum package Manager 
+				- Debian / Ubuntu 		===>	apt/apt-get package Manager 
+				- Fedora				===>	dnf (Latest Version of Fedora)
+												yum (Previous Version of Fedora)
+												
+			- Package Managers can be executed only by the root user on Linux
+			
+				- To work with Package Manager :
+					- Elevate the Access to Root Level 
+						- sudo -i			# This Command is used to elevate the access to root level
+		
+				- clear 
+				
+				- apt update 				# To Update the default packages 
+		
+			- To Install any tool/package :
+			
+				Install Pre-requisites	
+				Install Actual Tool
+				Post Installation Actions				
+		
+					Eg.: Tomcat :::: 
+					
+						Install Pre-requisites			===> jdk 
+						
+						Install Actual Tool				===> Install Tomcat (port : 8080)
+						
+						Post Installation Actions		===> Started Tomcat 
+		
+		
+			- Package :
+			
+					- Standalone Application Package
+					
+						- apt install git 
+					
+					- Service Package 					===> Are accessed using it's port Number.
+			
+						- apt install nginx
+
 							Example:
 
 							ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-13-126-190-242.ap-south-1.compute.amazonaws.com
