@@ -323,3 +323,402 @@ Day - 4 | 16th Oct. 2026
 							Example:
 
 							ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-13-126-190-242.ap-south-1.compute.amazonaws.com
+
+#########################
+Day - 4 | 16th Oct. 2026
+#########################
+
+
+	- Access AWS Console :::
+	
+		- Choose the nearest Region - Mumbai 
+		
+		- Virtual Machines ---> Linux VM ===> AWS --> EC2 Instances 
+		
+		
+	- Create EC2 Instance ::::
+	
+	
+		- Name/Tag 
+		
+		- AMI 
+		
+		- Instance Type 
+		
+		- KeyPair 
+		
+			- Key based authentication:
+			
+					- Private Key 	==> *.pem
+					
+					- Public Key 	==> authorized_keys
+		
+		- No. of Instances 
+
+				- Connect to EC2 Instance ::::
+				
+					To connect to Linux instance we use 
+					
+						- SecureSHell(SSH) Connection
+						
+						- port 22 
+						
+					- Parameters required to enable SSH connection
+
+						- HostName 				# Public IP Address 
+						
+						- UserName				# Default Linux User Name  (ubuntu)
+
+						- User Credentials: (Authentication Types)
+							- Password based Authentication
+							- Token based Authentication
+							- Key based Authentication
+								- Private Key 					# *.pem
+								- Public Key 
+								- authorized_keys
+							- Passwordless Authentication
+							
+				- Login to EC2 Instance :::
+				
+					- EC2 Instance Connect 				# Thru Web Browser
+					
+					- SSH Agent :						# Windows Users 
+					
+						- Putty 
+						- MobaXTerm						# Windows Users 
+							==> https://mobaxterm.mobatek.net/download-home-edition.html	
+
+							Install MobaXTerm/Putty on Local Machine - Windows Users
+							
+								- SSH Agent to connect to Remote Servers.
+								
+								- https://mobaxterm.mobatek.net/download-home-edition.html  
+									# Choose Installer Edition.
+									# Right click & Extract 
+									# Goto to the Folder & Run the Exec.	
+				
+					- Terminal :						# Window/Mac/Linux
+
+							Open the Terminal.
+
+							Locate your private key file. The key used to launch this instance is AWS_MLOps_KeyPair.pem
+
+							Run this command, if necessary, to ensure your key is not publicly viewable.
+							chmod 400 "AWS_MLOps_KeyPair.pem"
+
+							Example:
+
+							ssh -i "AWS_MLOps_KeyPair.pem" ubuntu@ec2-13-126-190-242.ap-south-1.compute.amazonaws.com
+					
+						
+	
+	
+	1 VM ==> 750 Hrs/Month 
+	
+	10 VMs ==> 75 Hrs/Month 
+	
+
+	Working with Linux Commands ::::
+	
+
+		- Package Management ::::
+		
+			Package Manager - apt/yum/dnf ==> can be executed as a root user.
+			
+		- Linux Distributions 
+				
+		- Package Management :::
+
+			- Package Managers are used to install/Uninstall/Upgrade the Packages/software 
+		
+				- Centos / RHEL 		===> 	yum package Manager 
+				- Debian / Ubuntu 		===>	apt/apt-get package Manager 
+				- Fedora				===>	dnf (Latest Version of Fedora)
+												yum (Previous Version of Fedora)
+												
+			- Package Managers can be executed only by the root user on Linux
+			
+				- To work with Package Manager :
+					- Elevate the Access to Root Level 
+						- sudo -i			# This Command is used to elevate the access to root level
+		
+				- clear 
+				
+				- apt update 				# To Update the default packages 
+		
+			- To Install any tool/package :
+			
+				Install Pre-requisites	
+				Install Actual Tool
+				Post Installation Actions				
+		
+					Eg.: Tomcat :::: 
+					
+						Install Pre-requisites			===> jdk 
+						
+						Install Actual Tool				===> Install Tomcat (port : 8080)
+						
+						Post Installation Actions		===> Started Tomcat 
+		
+		
+			- Package :
+			
+					- Standalone Application Package
+					
+						- apt install git 
+					
+					- Service Package 					===> Are accessed using it's port Number.
+			
+						- apt install nginx
+
+
+
+#########################
+Day - 5 | 19th Oct. 2026
+#########################
+
+	- Setup the Application Service Ports:
+	
+		- Enable Port Number:
+		
+			using the Security Group:
+			
+				--> Add the required ports to Inbound Rules
+	
+					
+			How to Install/Manage Packages ? :::
+			
+			- Elevate the Access to Root Level
+				sudo -i 					# This Command is used to elevate the access to root level
+				
+			- apt update 					# Used update the default packages
+			
+			- apt install openjdk-17-jre -y	# Install Java Package 
+			
+			
+			- Web Application Servers! (Tomcat(8080)/Nginx/Httpd) - enabled with Host Port.
+				
+				- Update the Security Group - used to manage the inbound and outbound traffic
+			
+			
+			- apt install nginx -y			# port 80 
+			
+			- nginx -version				# http://13.201.22.0/
+			
+			- Linux Application Service(nginx/Jenkins) 		
+			
+				- Start / Stop / Enable / Status / restart 
+				
+				systemctl status nginx 
+				
+				systemctl status tomcat
+				
+				systemctl start nginx
+				
+				systemctl stop nginx
+				
+				systemctl enable nginx		# Used to define the service as as start up service
+		
+				systemctl disable nginx		# Used to remove the service from the start-up task list
+				
+				systemctl restart nginx 
+				
+			- apt install git				# Install git 
+			
+			- apt remove git 				# Uninstall git 
+			
+			- apt upgrade git 				# Used to upgrade git
+			
+			which nginx						# Used to get the path of installation ?
+			
+			which git 
+
+		
+		
+		
+		
+		- File Management :::
+
+			Navigate to Directories/Folders :::
+
+				- pwd				# Get the Present Working Directory
+
+				- cd				# Change Directory
+				
+				- cd <dir_name> 	# Change to a specific directory				
+				
+				- cd /				# This command will take to the System root directory			
+			
+				- cd ~				# This command will take to the home directory(Default Directory) of the specific linux user
+									Eg.: 	ubuntu 	===> /home/ubuntu 
+		
+											root	===> /root
+									
+				- cd .. 			# Back to previous directory
+	
+				- ls 				# Is to List the files and Directories 
+				
+				- ll				# Long List 
+	
+		Create files/Directories :
+		
+		File Operations :
+		
+			- Open / Read / Delete / Update / Rename / Copy 
+			
+			
+		File Operations :
+		
+			- echo "Message" 				# output statement - To print msg to terminal 
+			
+			- echo "Record1" > file1.txt 	# Create/update a file with record
+		
+			- echo "Record1" >> file1.txt 	# Add New Record to a file	
+			
+			- touch <file_name>				# To Create Empty file
+			
+			- cat <file_name>				# To read the file contents 
+			
+			- File Editors :
+			
+				- vi editor					# To Create/Open a file in interactive mode				
+				
+				Eg.: 
+				
+					vi <file_name>			# To Create/Open a file in interactive mode
+					
+					
+					vi sample.txt
+					
+					press :
+					
+						i 					# go to insert mode 	
+
+						# Enter the file contents
+						# Enter the file contents
+						# Enter the file contents
+						# Enter the file contents
+					
+						esc :wq				# Save and exit from file 
+						
+						esc :q!				# exit from file without saving the changes 
+						
+						
+			- Rename a file/directory
+
+
+						mv <existing_file_name> <New_file_Name>
+						
+						Eg.: 
+						
+						mv sample1.txt dummyfile1.txt
+						
+						mv sdir2/ outputdir1
+						
+			- Delete/Remove files/Directories :
+			
+						rm <file_name>
+						
+						rm <file1_name> <file2_name>
+						
+						rm *.txt 
+						
+						rm fl1.txt f2.txt 
+						
+						rm -f s1.txt 			# Force Deletion
+						
+						rm -rf <directory_name>	# Force Delete Directories
+												
+		Create Directories :
+		
+			mkdir <New_Dir_Name> 				# Make Directory 
+			
+
+		ls 				# Get the list of files & Dirs 
+		
+		ls - a			# Get the list of all files & dirs(including hidden files and dirs)
+
+		ll				# Long Listing 
+
+		
+		File :
+		
+			- Simple flat file 										RW
+			
+			- Script File 		(Programs)							RWX
+			
+			- Artifacts 		(Binary files)
+		
+		
+		Owner Level Access 
+		
+		User Group Level Access 
+		
+		Public User Access 
+		
+ubuntu@ip-172-31-11-177:~$ ll
+total 48
+drwxr-x--- 7 ubuntu ubuntu 4096 Oct 19 16:05 ./
+drwxr-xr-x 3 root   root   4096 Oct 19 14:44 ../
+-rw------- 1 ubuntu ubuntu   62 Oct 19 14:53 .Xauthority
+-rw-r--r-- 1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Mar 31  2024 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 Oct 19 14:53 .cache/
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:47 .file1.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Oct 19 15:48 .folder2/
+-rw-r--r-- 1 ubuntu ubuntu  807 Mar 31  2024 .profile
+drwx------ 2 ubuntu ubuntu 4096 Oct 19 14:44 .ssh/
+-rw-r--r-- 1 ubuntu ubuntu    0 Oct 19 14:53 .sudo_as_admin_successful
+-rw------- 1 ubuntu ubuntu 1827 Oct 19 15:31 .viminfo
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:35 dir4
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:35 dir5
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:35 dir6
+drwxrwxr-x 2 ubuntu ubuntu 4096 Oct 19 15:46 folder1/
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:34 s1
+drwxrwxr-x 2 ubuntu ubuntu 4096 Oct 19 15:34 s1dir1/
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:34 s2
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:34 s3
+
+
+	- File Access Management :::
+	
+	    -rw-rw-r-- 1 ubuntu ubuntu    0 Oct 19 15:34 s3
+		
+		----------
+		
+		-									# Denote dir or file (Possible value:  d or - )
+												'd'  Denotes Directory
+												'-'  Denotes File 
+												
+												
+		 ---								# Denote the Owner Level Access 
+												Possible Values: r / w / x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access 
+		
+			---								# Denote the Group Level Access
+												Possible Values: r / w / x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access
+
+			   ---							# Denote the Public User Level Access
+												Possible Values: r / w / x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access			
+		
+	- File Access Mode:
+	
+		chmod <Access_Level> <File/Directory_Name>
+		
+		chmod 755 scrpt1.sh
+
+Next :::
+		
+		- User and Access Management :::		
+		
+		- Remote Servers Management :::
+		
+		- Process Automation(Shell Scripting) :::
