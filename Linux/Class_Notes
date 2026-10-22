@@ -722,3 +722,137 @@ Next :::
 		- Remote Servers Management :::
 		
 		- Process Automation(Shell Scripting) :::
+
+#########################
+Day - 6 | 21st Oct. 2026
+#########################
+
+		- User and Access Management :::		
+		
+			- Linux User Management :
+			
+				- User Name & Password 
+
+		Create Linux User :
+
+		SSH Connection :	Secure SHell Connection 
+		
+			-> Host Name 
+			-> User Name 
+			-> User Authentication 
+
+			-> Authentication Types :
+			
+				- Password Based Authentication
+				
+				- Key Based Authentication
+					- Public Key 
+					- Private Key 
+					- authorized keys
+					
+				- Token Based Authentication
+				
+				- Passwordless Authentication
+
+
+
+
+
+		How to Create Linux User ?
+		
+			Username : devopsadmin 
+			
+			Bash Terminal Access :
+			
+			Home Dir :
+			
+			password :
+			
+			ssh-keys :
+
+
+		Create Linux User with SSH Keys :::
+		
+			sudo -i 
+			
+			useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+			su - devopsadmin
+
+			ssh-keygen -t ecdsa -b 521					#ubuntu 22.04 or higher version of ubuntu				
+
+			cd .ssh
+			
+			ls ~/.ssh 
+
+			#You should see following two files:
+
+			#id_ecdsa - private key
+			#id_ecdsa.pub - public
+			
+			
+			cat id_ecdsa.pub > authorized_keys			# authorized_keys this file name should be same.
+			
+			authorized_keys :::
+				It is the copy of Public Key.
+				
+				Always the private key will be compared with the authorized_keys
+				
+			cd !					# Used to Change the Access Mode of Files or Directories
+
+			chmod 600 /home/devopsadmin/.ssh/*
+
+		Create Password to any Linux User:
+		
+			As a root user ::
+			
+				passwd <user_name>
+				
+				passwd devopsadmin
+
+
+		Get the List of Linux Users ::::
+			cat /etc/passwd
+		
+		Get the list of Linux User Groups :::: 
+			cat /etc/group
+
+
+
+		Add user to a Group :
+		
+			usermod -aG <Existing_Group_Name> <Existing_User_Name>
+			
+			usermod -aG docker devopsadmin
+
+
+	
+		Add user to a Group :
+		
+			usermod -aG <Existing_Group_Name> <Existing_User_Name>
+			
+			usermod -aG docker devopsadmin
+
+
+		Change the Ownership of any dir/file :::		
+			
+			chown -R devopsadmin /opt/tomcat/		# Used to Change the Ownership of Files or Directories
+
+		Change the Ownership of any dir/file :::		
+			
+			chown -R devopsadmin /opt/web_app_dir1/		# Used to Change the Ownership of Files or Directories	
+			
+			chown -R devopsadmin:devopsadmin /opt/web_app_dir1/		# Used to Change the Ownership of Files or Directories	
+
+
+			Tomcat Service: --> Web Application Service 
+			
+			chown -R devopsadmin /opt/tomcat/		# Used to Change the Ownership of Files or Directories
+			chown -R devopsadmin:devopsadmin /opt/tomcat/		# Used to Change the Ownership of Files or Directories				
+
+
+Next:::
+
+			
+		- Remote Servers Management :::
+		- Process Automation(Shell Scripting) :::	
