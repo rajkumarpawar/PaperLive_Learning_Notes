@@ -1,0 +1,212 @@
+
+#########################
+Day - 10 | 27th Oct. 2026
+#########################
+	
+	Module - 3 | Version Control System using GIT ::::
+
+	- Continuous Development :::
+	
+		- It is the capability of any Application Development Team to Continuously Develop code changes. 
+		- It is a process that is used to improve the Developers' productivity.
+		
+		
+	-> index.html 
+	
+	-> Create the Project_Folder / Workspace Directory
+	
+	myweb_application 
+	
+	- create index.html 
+		
+	<html>
+	---
+	--
+	-
+	-
+	-
+	-
+	-
+	</html>
+	
+	save index.html in the file system
+	
+	Test the changes 
+	
+	open index.html 
+	
+	<html>
+	---
+	--
+	-xxxxxxx
+	-cccccc
+	-vvvvvvvv
+	-
+	-
+	</html>
+	
+	save index.html in the file system
+	
+	Test the changes 	
+
+	open index.html 
+	
+	<html>
+	---
+	--
+	asdf
+	asdf
+	adf
+	asdf
+	-xxxxxxx
+	-cccccc
+	-vvvvvvvv
+	-
+	-
+	</html>
+	
+	save index.html in the file system
+	
+	Test the changes
+	
+	
+	Version Control System:
+	
+		- Used to Version Control the Source Code Changes 
+		- Used to keep the track of the changes 
+		
+		
+	- create index.html 
+		
+	<html>
+	---
+	--
+	-
+	-
+	-
+	-
+	-
+	</html>
+	
+	save index.html using Version Control System		index.html_V1.0
+	
+	Test the changes 
+	
+	open index.html 
+	
+	<html>
+	---
+	--
+	-xxxxxxx
+	-cccccc
+	-vvvvvvvv
+	-
+	-
+	</html>
+	
+	save index.html using Version Control System		index.html_V1.1				# Version_Number/Tag/Commit_ID
+	save index.html using Version Control System		index.html_V1.2
+	save index.html using Version Control System		index.html_V1.3
+	save index.html using Version Control System		index.html_V1.4
+	save index.html using Version Control System		index.html_V1.5
+	
+
+	Types of Version Control System ::
+	
+		- Local VCS 			==> 	Single User 
+		
+		- Centralized VCS 
+		
+		- Distributed VCS 
+		
+	GIT - Version Control System
+		
+		- Git is an Open-Source Distributed Version Control System
+		- Used to Version Control the Source Code Changes 
+		- Used to track the Source Code Changes
+		- Used to perform parallel development using Branching Technique
+		
+		
+		- Git		==> To Manage the Local Repositories(Folders/Files)
+		
+		- GitHub 	==> To Manage the Remote Repositories(Folders/Files)
+			
+			
+	- Git Installation 
+		- Setup Git Client on Local Machine 
+	
+	- Working Git Cli Command 
+	
+	- Git File Work flow 
+	
+	- Git Branches 
+	
+	- Handling the Conflicts 
+	
+	- Remote Repositories using Github 
+	
+ 	- GIT File Workflow ::::
+	
+		--> Distributed VCS :::
+		
+			- Remote Repository Server 			===>		GitHub/GitLab/Azure_Repo/
+				
+			- Local Machine 					===>		Git Client 
+	
+	- Developer:
+	
+		Developers' Workload 
+		
+			- Enhancement Projects / Bugfix Projects		===> LIVE Project ==> 
+			
+			- New Projects 
+			
+	
+	- GIT File Workflow ::::
+	
+	Local Machine 																Remote Server 
+	
+	- Git Client 																	- Remote Repository UI
+	
+	Working Directory		   Staging/Index Area			Local Repository		Remote Repository
+	
+	index.html 		 --------> index.html 	  	----------> index.html_V1	--------> index.html_V1
+					  git add 					git commit					git push
+	index.html 		 --------> index.html 	  	----------> index.html_V2	--------> index.html_V2
+					  git add 					git commit					git push	
+	index.html 		 --------> index.html 	  	----------> index.html_V3	--------> index.html_V3
+					  git add 					git commit					git push
+	index.html 		 --------> index.html 	  	----------> index.html_V4	--------> index.html_V4
+					  git add 					git commit					git push	
+	index.html 		 --------> index.html 	  	----------> index.html_V5	--------> index.html_V5
+					  git add 					git commit					git push
+	index.html 		 --------> index.html 	  	----------> index.html_V6	--------> index.html_V6
+					  git add 					git commit					git push	
+	
+
+
+	- Git Clone 		# To Copy/Clone the entire Remote Repository to the Local Machine
+	
+	- Git Add 			# To Add the changes from Working Directory to Staging Area 
+	
+	- Git Commit 		# To Commit the changes from Staging Area to Local Repository
+	
+	- Git Push 			# To Push the Changes from Local Repository to Remote Repository
+	
+	- Git Fetch/Pull::
+	
+			- Both Git Fetch and Git Pull are used to handle the Incremental changes from Remote Repositories
+			
+		- Git Fetch:
+			
+			- It used to just check for the incremental changes in the Remote Repository, if there is any Incremental Changes exist, it will update the details only in the Local Repository. Git fetch will NEVER update the Working Directory
+			
+		- Git Pull:
+			- It used to check for the incremental changes in the Remote Repository, if there is any Incremental Changes exist, it will update the details only in the Local Repository as well as in the Working Directory.
+				
+				git pull = Git Fetch + Git Merge
+				
+		As a best practise, it is always recommended to use git pull to keep the Local Repo in sync with Remote Repo.
+		
+		
+	
