@@ -619,7 +619,7 @@ Day - 12 | 30th Oct. 2026
 	
 		- UnStage :::  
 		
-	- Undo the Changes 
+	- Undo the files Changes :
 	
 		- Unstage :::
 		
