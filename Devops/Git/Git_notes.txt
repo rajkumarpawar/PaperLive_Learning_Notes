@@ -1414,3 +1414,140 @@ Day - 14 | 3rd Nov. 2026
 						
 							git commit -m "Combined Commits"
 	
+#########################
+Day - 15 | 4th Nov. 2026
+#########################
+
+	- Working with Remote Repositories :::
+	
+	- GitHub - Remote Git Repository
+	
+	
+	- Git Clone 		# To Copy/Clone the entire Remote Repository to the Local Machine
+	
+	- Git Add 			# To Add the changes from Working Directory to Staging Area 
+	
+	- Git Commit 		# To Commit the changes from Staging Area to Local Repository
+	
+	- Git Push 			# To Push the Changes from Local Repository to Remote Repository
+	
+	- Git Fetch/Pull::
+	
+			- Both Git Fetch and Git Pull are used to handle the Incremental changes from Remote Repositories
+			
+		- Git Fetch:
+			
+			- It used to just check for the incremental changes in the Remote Repository, if there is any Incremental Changes exist, it will update the details only in the Local Repository. Git fetch will NEVER update the Working Directory
+			
+		- Git Pull:
+			- It used to check for the incremental changes in the Remote Repository, if there is any Incremental Changes exist, it will update the details only in the Local Repository as well as in the Working Directory.
+				
+				git pull = Git Fetch + Git Merge
+				
+		As a best practise, it is always recommended to use git pull to keep the Local Repo in sync with Remote Repo.
+		
+		
+		
+	- Pull Request :::
+	
+		--> Developers create the Pull Request --> to Merge the changes from their feature branch to the target branch.
+		--> Pull Request should approved by the Reviewer
+		
+	
+	- Create Remote GitHub Repository
+	
+	- Create Remote Repository Branches 
+	
+		- Clone :::
+		
+			git clone <remote_repo_url>
+			
+			
+			git clone https://github.com/PL-DevOps-Cloud-0930/Remote_Test_Repo1.git
+			
+		- Push 	:: Expect the github Credentials
+		
+			git push -u origin <target_branch_name>
+			
+			
+			git push -u origin local_feature1	
+
+				Create the GitHub Personal Access Token (PAT)
+			
+		
+		- Fetch & Pull 
+		
+		- remote :::
+		
+			git remote -v 							# To get the list of remote repos linked to the local repo 
+			
+			git remote remove origin
+			
+			git remote add origin https://github.com/PL-DevOps-Cloud-0930/Remote_Test_Repo1.git
+			
+			
+		git rebase  (vs) git pull 
+		
+		Repo1:
+		
+			f1 
+			
+			f2 
+		
+
+
+
+
+
+
+  762  clear
+  763  mkdir remoterepos
+  764  ls
+  765  cd remoterepos/
+  766  clear
+  767  pwd
+  768  git clone https://github.com/PL-DevOps-Cloud-0930/Remote_Test_Repo1.git
+  769  ls
+  770  cd Remote_Test_Repo1/
+  771  clear
+  772  ls
+  773  ls -a
+  774  git status
+  775  git remote -v
+  776  git log --oneline
+  777  ls
+  778  git branch
+  779  git switch -c local_feature1
+  780  git branch
+  781  git log --oneline
+  782  git status
+  783  git status
+  784  ls
+  785  echo "rec1" >> local_feature1_file.txt
+  786  git add .
+  787  git commit -m "local_f1cm1"
+  788  git log --oneline
+  789  git status
+  790  git push -u origin local_feature1
+  791  git switch main
+  792  ls
+  793  git status
+  794  git fetch
+  795  ls
+  796  git statu
+  797  git status
+  798  git pull
+  799  ls
+  800  git status
+  801  git status
+  802  git pull
+  803  ls
+  804  git remote -v
+  805  git remote remove origin
+  806  git remote -v
+  807  git status
+  808  git remote add origin https://github.com/PL-DevOps-Cloud-0930/Remote_Test_Repo1.git
+  809  git remote -v
+  810  git remote add origin2 https://github.com/PL-DevOps-Cloud-0930/Remote_Test_Repo2.git
+  811  git remote -v
+  812  history
