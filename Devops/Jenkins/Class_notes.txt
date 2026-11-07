@@ -16,8 +16,6 @@ Day - 17 | 6th Nov. 2026
 		- Used to perform any scheduled process automation 
 		
 	
-	
-	
 	- Jenkins Architecture :: CI & CD 
 	
 		- Jenkins is based on master/Controller & slave/Node
@@ -25,3 +23,26 @@ Day - 17 | 6th Nov. 2026
 			- Jenkins Master/Controller (VM) :		
 								- Install Jenkins 
 								- To Create Jenkins Jobs/Projects/Pipelines and scheduled to run on the Jenkins Slave Nodes 
+
+			- Jenkins Slave_Node (VM) (Build Server):	
+								- Install the Build Tools 
+								- To Execute the Jobs  
+	
+	Scenario 1: Application Build and Release Frequency is very less 
+	
+	
+		- Create Jenkins Master/Controller (VM) :
+				--> Install Jenkins 
+				--> Install all the required Build Tools 
+				--> Create Jenkins CI/CD Pipeline Projects & Execute the Build in same Jenkins_Master Node.	
+	
+			
+	Scenario 2: Multiple Application Build and Release Frequency is very high 	
+
+
+		- Jenkins Master/Controller (VM) :
+				--> Install Jenkins 
+				---> To Create Jenkins Jobs/Projects/Pipelines and scheduled to run on the Jenkins Slave Nodes 
+			
+		
+
