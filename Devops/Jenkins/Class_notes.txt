@@ -42,6 +42,29 @@ Day - 17 | 6th Nov. 2026
 
 		- Jenkins Master/Controller (VM) :
 				--> Install Jenkins 
+			- Jenkins Slave_Node/Build_Server1  (VM):	Perform Java Application Build 
+			- Jenkins Slave_Node/Build_Server1.1  (VM):	Perform Java Application Build 
+			- Jenkins Slave_Node/Build_Server2  (VM):	Perform .Net Application Build 
+			- Jenkins Slave_Node/Build_Server3  (VM):	Perform Python Application Build 
+			- Jenkins Slave_Node/Build_Server4  (VM):	Perform Node Application Build 
+			- Jenkins Slave_Node/Build_Server5  (VM):	Perform Angular Application Build 
+			
+			
+	- Jenkins Pipelines/Jobs/Projects Workflow :
+		
+				- Application Build 
+				==> Process of Compiling the Source Code, 
+						Create the Artifacts(Executable code - Binaries - *.war/*.jar/*.exec/*.dll) 
+				- Unit Test 
+				- Promote the Changes to Test Environments
+				- Notify the Testing Team thru Emails				
+			
+			
+	CI/CD Workflow :::
+	
+		SCM_Checkout 
+		Application Build 
+
 				---> To Create Jenkins Jobs/Projects/Pipelines and scheduled to run on the Jenkins Slave Nodes 
 			
 		
