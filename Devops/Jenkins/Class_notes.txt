@@ -14,6 +14,9 @@ Day - 17 | 6th Nov. 2026
 		- Is an open-source build orchestration Tool 
 		- Used to Create the end-to-end CICD Pipeline to automation application builds and deployments
 		- Used to perform any scheduled process automation 
+		
+	
+	
 	
 	- Jenkins Architecture :: CI & CD 
 	
@@ -28,7 +31,10 @@ Day - 17 | 6th Nov. 2026
 								- To Execute the Jobs  
 
 	
+	
+	
 	Scenario 1: Application Build and Release Frequency is very less 
+	
 	
 		- Create Jenkins Master/Controller (VM) :
 				--> Install Jenkins 
@@ -36,7 +42,10 @@ Day - 17 | 6th Nov. 2026
 				--> Create Jenkins CI/CD Pipeline Projects & Execute the Build in same Jenkins_Master Node.	
 			
 			
+			
+			
 	Scenario 2: Multiple Application Build and Release Frequency is very high 	
+
 
 		- Jenkins Master/Controller (VM) :
 				--> Install Jenkins 
@@ -44,7 +53,7 @@ Day - 17 | 6th Nov. 2026
 			
 		
 			- Jenkins Slave_Node/Build_Server1  (VM):	Perform Java Application Build 
-			- Jenkins Slave_Node/Build_Server1.1(VM):	Perform Java Application Build 
+			- Jenkins Slave_Node/Build_Server1.1  (VM):	Perform Java Application Build 
 			- Jenkins Slave_Node/Build_Server2  (VM):	Perform .Net Application Build 
 			- Jenkins Slave_Node/Build_Server3  (VM):	Perform Python Application Build 
 			- Jenkins Slave_Node/Build_Server4  (VM):	Perform Node Application Build 
@@ -59,6 +68,7 @@ Day - 17 | 6th Nov. 2026
 				- Unit Test 
 				- Promote the Changes to Test Environments
 				- Notify the Testing Team thru Emails				
+			
 			
 			
 	CI/CD Workflow :::
@@ -187,3 +197,249 @@ systemctl status jenkins
 # systemctl enable jenkins 
 
 /var/lib/jenkins 		# Default Installation Dir of Jenkin on Linux Box
+
+
+		
+#########################
+Day - 18 | 9th Nov. 2026
+#########################		
+		
+		- Jenkins Administrator ::::
+		
+			- Installation and Configuration of Jenkins 
+			
+			- Jenkins Global System Configurations 
+			- Plugins Management
+			- Tools Management 
+			- User Management 
+			- Security Management 
+			- Credentials Management 		
+		
+	- Installation and Configuration of Jenkins 	
+	
+		Open web browser :
+
+		http://<Public_IP_Address>:8080/	
+
+		
+		15.207.113.213:8080	
+		
+		- Unlock Jenkins 
+		
+		- Configure Default Plugins(Extensions) 
+		
+			- Choose Install Suggested Plugins option
+			
+		- Create First Admin User 
+	
+	
+	- Jenkins Global System Configurations :::
+			- Used to set up the default jenkins configuration/external server configs 
+	
+	- Plugins Management :::			
+		
+			- Used to install/uninstall/upgrade/enable/disable the plugins  
+			
+			- Publish Over SSH Plugins --> Install this. choose Restart.	
+	
+	- Tools Management :::	
+
+			- Used to identify the installation path & settings of the actual tools used in the Infra-Structure.
+			
+		Jenkins_Master (VM)		--> jdk,jenkins,git
+		
+			Jenkins_SlaveNode1 (VM) - maven build 
+			
+							--> jdk, maven, git 
+		
+		
+		
+		- Jenkins is based on master/Controller & slave/Node
+		
+			- Jenkins Master/Controller (VM) :		
+								- Install Jenkins  --> jdk, jenkins, git 
+								- Install required plugins --> maven plugin 
+								- To Create Jenkins Jobs/Projects/Pipelines and scheduled to run on the Jenkins Slave Nodes 
+		
+				- Jenkins Slave_Node (VM) (Build Server):	
+								- Install the Build Tools --> jdk, maven Tools
+								- To Execute the Jobs  
+		
+		
+		
+	- User Management :::
+	
+		- Used to enable the Users' Authentication
+		
+		- Used to administrate the Jenkins Users' profile 
+		
+			- developers who want to login 
+			
+				- user1 & user2 
+			
+	
+	- Security Management :::
+		
+		- Used to enable the Users' Authorization		
+	
+			
+			
+	- Credentials Management :::
+	
+		- To Setup Jenkins Credentials Manager 
+	
+	
+	
+Next ::
+
+	- Create Jenkins CICD Pipeline Project on Jenkins Master
+	- Creation of Jenkins Master & Slave Nodes Configuration
+	- Create Jenkins CICD Pipeline Projects to automate Builds and Deployments
+	- Onboard the Applications to use Jenkins CICD Workflow process
+	- Periodic Upgrade of Jenkins Servic, Tools and the Plugins 
+	- Periodic Backup and Recovery
+	- Troubleshooting the Jenkins related issues. 
+		
+	
+
+	
+	
+#########################
+Day - 19 | 10th Nov. 2026
+#########################	
+	
+	- Create Jenkins CICD Pipeline Project on Jenkins Master
+	
+	
+		Jenkins Projects :
+		
+			- Jenkins Free Style Projects	::: Based on the Manual Configurations 
+			
+			- Jenkins Pipeline Projects 	::: Based on the Automation Script
+												- Used to Onboard Applications to use DevOps CICD Process 
+												
+					
+		Variables/Parameters  :::			
+			
+			- Environment Variables :		
+			
+				- Jenkins pre-defined variables/keywords 
+				
+				
+				echo "Hello" 				# Print the constant value 
+
+				
+				echo "${var1}"				# Print the value of variable
+				
+				echo "jenkins-${JOB_NAME}-${BUILD_NUMBER}"
+			
+			
+			
+			- User Defined Varibles :		echo "User Defined Variables -${envi}"
+			
+			
+			- Jenkins Pipeline Projects 	::: Based on the Automation Script
+												- Used to Onboard Applications to use DevOps CICD Process 
+												
+												
+		
+			- Jenkins Pipeline are the collections of Stages 
+			
+				- Scripted Pipelines :::
+				
+				- Declarative Pipelines :::  yaml scripts key:value
+				
+					
+			
+			
+				Pipeline 
+					- Stage1 
+						- step1 		# Task  
+					- Stage2
+						- step1 		# Task  		
+					- Stage3
+						- step1 		# Task 			
+				
+			
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                echo 'Hello Everyone'
+            }
+        }
+        stage('Hello1') {
+            steps {
+                echo 'Hello'
+            }
+        }
+    }
+}			
+			
+			
+	CI/CD Workflow :::
+	
+		SCM_Checkout 
+		Application Build 
+		Unit Testing 
+		Create Artifacts
+		Promote the Application to Test Environments
+		Notify 
+		Deploy to Prod 				
+			
+			
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Check out'		
+                echo 'Perform SCM Check out'					
+            }
+        }
+        stage('Application Build') {
+            steps {
+                echo 'Perform Application Build'
+            }
+        }
+        stage('Deploy to QA') {
+            steps {
+                echo 'Perform QA Deployment'
+            }
+        }
+        stage('Deploy to UAT') {
+            steps {
+                echo 'Perform UAT Deployment'
+            }
+        }
+        stage('Deploy to PROD') {
+            steps {
+                echo 'Perform PROD Deployment'
+            }
+        }
+    }
+}			
+			
+				
+	- Java Maven Web Application Project :::
+	
+		https://github.com/PL-DevOps-Cloud-0930/java-webapp-project.git
+		
+			
+Next :::
+		
+	- Creation of Jenkins Master & Slave Nodes Configuration ---> 
+	- Create Jenkins CICD Pipeline Projects to automate Builds and Deployments
+	- Onboard the Applications to use Jenkins CICD Workflow process
+	- Periodic Upgrade of Jenkins Servic, Tools and the Plugins 
+	- Periodic Backup and Recovery
+	- Troubleshooting the Jenkins related issues. 			
+			
+			
+			
+		
+	
