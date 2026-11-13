@@ -582,6 +582,34 @@ Day - 20 | 11th Nov. 2026
 
 	- Remote Server Management ::::
 
+		Purpose of the Servers :
+		
+			Jenkins Master/Controller (VM)				
+					# To Create Jenkins Jobs/Projects/Pipelines and scheduled to run on the Jenkins Slave Nodes			
+			
+			Jenkins Slave_Node/Build_Server1  (VM)		
+					# Perform Java Maven Application Build 
+					# Tasks:
+						SCM_Checkout 
+						Application Build 
+						Unit Testing 
+						Create Artifacts
+						Promote the Application to Test Environments
+						Notify 			
+	
+		List of Server ::::
+		
+			
+			Jenkins Master/Controller (VM)
+			Jenkins Slave_Node/Build_Server1  (VM)
+			
+			
+		Tools to be Installed ::::
+
+		
+			Jenkins Master/Controller (VM)			-->	Install git, jdk, jenkins  	
+
+
 		
 	
 			
